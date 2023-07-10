@@ -2,7 +2,6 @@ import tkinter as tk
 import socket
 import threading
 
-
 window = tk.Tk()
 window.title("Sever")
 
@@ -48,7 +47,7 @@ def start_server():
     server = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
     print(socket.AF_INET)
     print(socket.SOCK_STREAM)
-    server.setblocking(False)
+    server.setblocking(True)
     server.bind((HOST_ADDR, HOST_PORT))
     server.listen(5)  # server is listening for client connection
 
